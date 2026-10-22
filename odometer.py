@@ -50,3 +50,6 @@ class Odometer:
 
     def get_position(self):
         return (self.x, self.y, self.theta)
+
+    def print_position(self):
+        print(f"x={self.x:.2f}, y={self.y:.2f}, theta={self.theta:.2f}")

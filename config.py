@@ -30,12 +30,13 @@ HEADING_GAIN = 0.5
 MAX_HEADING_CORRECTION = 6
 DRIVE_SLOW_DISTANCE = 10.0
 POSITION_TOLERANCE = 0.5
+RIGHT_POWER_SCALE = 0.98
 
 # turn to
 TURN_MAX_POWER = 18
 TURN_MIN_POWER = 10
 TURN_SLOW_ANGLE = 30.0  # start slowing within 30° of target
-ANGLE_TOLERANCE = 2.0  # acceptable heading error in degrees
+ANGLE_TOLERANCE = 0.5  # acceptable heading error in degrees
 
 def initialize():
     wait_ready_sensors(True)

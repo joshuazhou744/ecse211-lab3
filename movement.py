@@ -30,7 +30,7 @@ def drive_distance(cm, odom, timeout=30):
             error = (target_heading - heading + 180) % 360 - 180
             correction = max(-config.MAX_HEADING_CORRECTION, min(config.MAX_HEADING_CORRECTION, config.HEADING_GAIN * error))
             config.left_motor.set_power(direction * power + correction)
-            config.right_motor.set_power(direction * power - correction)
+            config.right_motor.set_power((direction * power - correction) * config.RIGHT_POWER_SCALE)
 
             time.sleep(0.01)
     finally:
